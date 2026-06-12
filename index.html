@@ -472,14 +472,47 @@ footer .footer-links a:hover { color: var(--accent-color); }
 }
 
 /* RESPONSIVE */
+@media(max-width:900px){
+  .project-body, .intern-body { grid-template-columns: 1fr; gap: 20px; }
+  .stack-layout { grid-template-columns: 1fr; gap: 25px; }
+  .capabilities-columns { grid-template-columns: 1fr; }
+}
+
 @media(max-width:768px){
   body { padding: 0 20px; }
   header h1 { font-size: 1.25rem; }
   .hero-headline { font-size: 1.25rem; }
-  .project-body, .intern-body { grid-template-columns: 1fr; gap: 20px; }
-  .stack-layout { grid-template-columns: 1fr; gap: 25px; }
-  .capabilities-columns { grid-template-columns: 1fr; }
   .project-meta-row, .intern-meta-row { flex-direction: column; gap: 4px; }
+  .nav-links a { margin-left: 20px; }
+  section { padding: 45px 0; }
+  header { padding: 35px 0 45px 0; }
+}
+
+@media(max-width:600px){
+  body { padding: 0 16px; }
+  .nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 14px; }
+  .nav-links a { margin-left: 0; font-size: 0.85rem; }
+  nav { flex-wrap: wrap; gap: 10px; padding: 20px 0; }
+  .intro-photo-frame { width: 140px; height: 140px; }
+  header h1, .hero-headline { font-size: 1.1rem; }
+  header .main-description { font-size: 1rem; }
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .cta-link, .cta-link-outline { text-align: center; width: 100%; }
+  .project-meta-row h3, .intern-meta-row h3 { font-size: 1.2rem; }
+  .project-detail-block, .intern-block { padding: 16px; }
+  .modal-window { max-width: 100%; max-height: 92vh; }
+  .modal-body { padding: 16px; }
+  .letter-card { padding: 16px; font-size: 0.82rem; }
+  .footer-links { flex-direction: column; gap: 12px; align-items: center; }
+  .logo-box { padding: 6px 10px; }
+  .logo-box span { font-size: 0.75rem; }
+}
+
+@media(max-width:380px){
+  .intro-tag { font-size: 0.7rem; letter-spacing: 1px; }
+  header h1, .hero-headline { font-size: 1rem; }
+  .nav-logo { font-size: 1rem; }
+  .nav-links a { font-size: 0.78rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
